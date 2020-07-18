@@ -1,7 +1,5 @@
 const translate = (input, translations) => {
-    
-    let inputArray = input.split(/\s/g)
-    console.log(inputArray)
+    const inputArray = input.split(/\s/g)
     let outputArray = []
     let output = ""
     
@@ -10,10 +8,13 @@ const translate = (input, translations) => {
       let newWord = inputArray[i]
 
       let capitalized = false
-      if (newWord.length > 0) {    
-          if (newWord[0] === newWord[0].toUpperCase()) {
-            capitalized = true
-          }
+      let uppercase = false
+      if (newWord.length > 0) {
+        if (newWord.toUpperCase() === newWord) {
+          uppercase = true
+        } else if (newWord[0] === newWord[0].toUpperCase()) {
+          capitalized = true
+        }
       }
     
       for (let j = 0; j < translations.length; j++) {
@@ -31,7 +32,7 @@ const translate = (input, translations) => {
           } else if (tail.includes("ed") && translations[j][`${Object.keys(translations[j])[0]}`].ed) {
             newWord = translations[j][`${Object.keys(translations[j])[0]}`].ed
             punctuation = tail.replace("ed", "")
-          } else if (newWord.includes(Object.keys(translations[j])[0])) {
+          } else if (newWord.toLowerCase().includes(Object.keys(translations[j])[0])) {
             newWord = translations[j][`${Object.keys(translations[j])[0]}`].normal
             punctuation = tail
           }
@@ -42,6 +43,9 @@ const translate = (input, translations) => {
     
       if (capitalized) {
         newWord = newWord[0].toUpperCase() + newWord.substring(1)
+      }
+      if (uppercase) {
+        newWord = newWord.toUpperCase()
       }
     
       outputArray.push(newWord)
