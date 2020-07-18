@@ -5,8 +5,59 @@ const translations = [
         }
     },
     {
+        ass: {
+            normal: "arse"
+        }
+    },
+    {
+        asses: {
+            normal: "arses"
+        }
+    },
+    {
+        just: {
+            normal: "jes'"
+        }
+    },
+    {
+        "we're": {
+            normal: "we"
+        }
+    },
+    {
+        if: {
+            normal: "iffen"
+        }
+    },
+    {
+        ever: {
+            normal: "e'er"
+        }
+    },
+    {
+        mom: {
+            normal: "mum",
+            s: "mums"
+        }
+    },
+    {
+        your: {
+            normal: "yer"
+        }
+    },
+    {
+        oh: {
+            normal: "sink me"
+        }
+    },
+    {
         "can't": {
             normal: "cannah"
+        }
+    },
+    {
+        here: {
+            normal: "'ere"
         }
     },
     {
@@ -34,6 +85,11 @@ const translations = [
             normal: "brawl",
             ing: "brawling",
             s: "brawls"
+        }
+    },
+    {
+        for: {
+            normal: "fer"
         }
     },
     {
