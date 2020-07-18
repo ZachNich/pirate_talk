@@ -8,6 +8,7 @@ const translate = (input, translations) => {
     for (let i = 0; i < inputArray.length; i++) {
     
       let newWord = inputArray[i]
+
       let capitalized = false
       if (newWord.length > 0) {    
           if (newWord[0] === newWord[0].toUpperCase()) {
@@ -16,7 +17,7 @@ const translate = (input, translations) => {
       }
     
       for (let j = 0; j < translations.length; j++) {
-        let regex = new RegExp(`^${Object.keys(translations[j])[0]}(((ed)|(ing))|((s)|[']?[s]?|[s]?[']))[!.?:;]*$`, 'ig'); 
+        let regex = new RegExp(`^${Object.keys(translations[j])[0]}(((ed)|(ing))|((s)|[']?[s]?|[s]?[']))[!.?:;,]*$`, 'ig'); 
         
         if (newWord.match(regex)) {
           let tail = newWord.substring(Object.keys(translations[j])[0].length, newWord.length)
