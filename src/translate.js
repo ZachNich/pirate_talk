@@ -5,15 +5,17 @@ const translate = (input, translations) => {
     let outputArray = []
     let output = ""
     
-    for (i = 0; i < inputArray.length; i++) {
+    for (let i = 0; i < inputArray.length; i++) {
     
       let newWord = inputArray[i]
       let capitalized = false
-      if (newWord[0] === newWord[0].toUpperCase()) {
-        capitalized = true
+      if (newWord.length > 0) {    
+          if (newWord[0] === newWord[0].toUpperCase()) {
+            capitalized = true
+          }
       }
     
-      for (j = 0; j < translations.length; j++) {
+      for (let j = 0; j < translations.length; j++) {
         let regex = new RegExp(`^${Object.keys(translations[j])[0]}(((ed)|(ing))|((s)|[']?[s]?|[s]?[']))[!.?:;]*$`, 'ig'); 
         
         if (newWord.match(regex)) {
