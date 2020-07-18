@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import translations from './Translations';
 import translate from './translate';
 import Pirate from './assets/pirate.svg'
 
 function App() {
+
+  const [input, setInput] = useState("")
+  const [output, setOutput] = useState("")
+  
+  const handleInput = e => {
+    const stateToChange = e.target.value
+    setInput(stateToChange)
+  }
+
+  const getOutput= () => {
+    setOutput(translate(input, translations))
+  }
+
   return (
     <>
       <div className='wrapper'>
@@ -21,9 +34,9 @@ function App() {
           </div>
           <div className='translate'>
             <div className='text-fields'>
-              <textarea className='input' rows='15' cols='25'></textarea>
-              <button onClick={(() => {})}>Translate</button>
-              <textarea className='output' rows='15' cols='25'></textarea>
+              <textarea className='input' rows='15' cols='25' onChange={handleInput}></textarea>
+              <button onClick={getOutput}>Translate</button>
+              <textarea className='output' rows='15' cols='25' value={output} readOnly></textarea>
             </div>
           </div>
         </div>
