@@ -21,9 +21,9 @@ function App() {
           </div>
           <div className='translate'>
             <div className='text-fields'>
-              <textarea rows='15' cols='25'></textarea>
-              <button>Translate</button>
-              <textarea rows='15' cols='25'></textarea>
+              <textarea className='input' rows='15' cols='25'></textarea>
+              <button onClick={(() => {})}>Translate</button>
+              <textarea className='output' rows='15' cols='25'></textarea>
             </div>
           </div>
         </div>
