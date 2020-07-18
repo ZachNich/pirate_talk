@@ -1,7 +1,7 @@
 const translate = (input, translations) => {
     
-    let inputArray = input.split(" ")
-    
+    let inputArray = input.split(/\s/g)
+    console.log(inputArray)
     let outputArray = []
     let output = ""
     
