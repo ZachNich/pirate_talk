@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import SpeechToText from './SpeechToText'
 
 function App() {
   return (
-    0
+    <SpeechToText />
   );
 }
 
