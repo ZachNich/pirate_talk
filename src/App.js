@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Progress } from "reactstrap"
 import translations from './Translations';
 import translate from './translate';
 import Pirate from './assets/pirate.svg'
@@ -8,13 +10,13 @@ function App() {
 
   const [input, setInput] = useState("")
   const [output, setOutput] = useState("")
-  
+
   const handleInput = e => {
     const stateToChange = e.target.value
     setInput(stateToChange)
   }
 
-  const getOutput= () => {
+  const getOutput = () => {
     setOutput(translate(input, translations))
   }
 
@@ -34,9 +36,13 @@ function App() {
           </div>
           <div className='translate'>
             <div className='text-fields'>
-              <textarea className='input' rows='15' cols='25' onChange={handleInput}></textarea>
+              <textarea className='input' rows="10" cols="25" onChange={handleInput}></textarea>
               <button onClick={getOutput}>Translate</button>
-              <textarea className='output' rows='15' cols='25' value={output} readOnly></textarea>
+              <textarea className='output' value={output} readOnly></textarea>
+            </div>
+            <div className="bar-container">
+              <Progress className="input-bar" value="50" />
+              <Progress className="output-bar" value="50" />
             </div>
           </div>
         </div>
