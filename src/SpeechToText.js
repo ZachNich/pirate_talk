@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { logDOM } from '@testing-library/react'
 
 
 const SpeechToText = () => {
-    const [listen, setListen] = useState(false)
+    const [listening, setListening] = useState(false)
     const [buttonText, setButtonText] = useState('Start listening')
     const [result, setResult] = useState('')
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
     const recognition = new SpeechRecognition()
     recognition.continuous = true;
-    recognition.interimResults = true;
+    recognition.interimResults = false;
 
     const start = () => {
         recognition.start()
@@ -29,18 +28,15 @@ const SpeechToText = () => {
         }
     }
 
-    const toggleListen = () => {
-        setListen({!listen}, )
-    }
-
-    
     useEffect(() => {
-    }, [buttonText])
+        recognition.addEventListener('result', onResult)
+    }, [buttonText, listening])
 
     return (
         <>
             <button onClick={() => {
-                
+                listening ? stop() : start()
+                setListening(!listening)
             }}>
                 {buttonText}</button>
             <div>
