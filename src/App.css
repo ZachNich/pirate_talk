@@ -1,0 +1,95 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    background-color: #438a5e;
+}
+
+.outline-text {
+    font-weight: 900;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.header-1 {
+    display: flex;
+    justify-content: center;
+    background-color: #7fdbda;
+    padding: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header-1 h1 {
+    display: flex;
+    align-items: center;
+    font-size: 32pt;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.header-2 {
+    display: flex;
+    justify-content: center;
+    background-color: #df5e88;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding: 0;
+    color: white;
+}
+
+.header-2 h2 {
+    margin: 1%;
+    padding: 0%;
+    font-size: 22pt;
+}
+.header-2 p {
+    font-size: 16pt;
+    color: black;
+    margin: 1%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #febf63;
+}
+.footer p {
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 900;
+    color: white;
+    margin: 1%;
+}
+
+.translator .instructions {
+    display: flex;
+    justify-content: center;
+}
+.translator .instructions p {
+    font-weight: 900;
+    color: white;
+    margin: 1%;
+    padding: 0;
+    font-size: 20pt;
+}
+
+.translate {
+    display: flex;
+    justify-content: center;
+}
+
+.text-fields {
+    display: flex;
+    flex-flow: row wrap;
+}
