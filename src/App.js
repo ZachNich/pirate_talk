@@ -35,9 +35,6 @@ function App() {
           <h2 className='outline-text'>Welcome to the pirate translator</h2>
         </div>
         <div className='translator'>
-          {/* <div className='instructions'>
-            <p className='outline-text'>Enter text below and see the pirate translation!</p>
-          </div> */}
           <div className='translate'>
             <div className='text-fields'>
               <textarea className='input' rows="10" cols="25" placeholder="Enter text here" onChange={handleInput}></textarea>
@@ -45,11 +42,11 @@ function App() {
               <textarea className='output' rows="10" cols="25" value={output} placeholder="Translation here" readOnly></textarea>
             </div>
             <div>
-              <p className="percent-pirate">pARRRlay-ometer</p>
+              <p className="percent-pirate">pARRRlay-ometers</p>
             </div>
             <div className="bar-container">
-              <Progress className="input-bar" value="25" />
-              <Progress className="output-bar" value="50" />
+              <Progress className="input-bar" />
+              <Progress className="output-bar" />
             </div>
           </div>
         </div>

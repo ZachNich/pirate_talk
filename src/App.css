@@ -44,7 +44,8 @@ body {
     background-color: #df5e88;
     padding-top: 1%;
     padding-bottom: 1%;
-    padding: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
     color: white;
 }
 
@@ -92,7 +93,7 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 .text-fields {
