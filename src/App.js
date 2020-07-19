@@ -20,7 +20,7 @@ function App() {
     setOutput(translate(input, translations))
   }
 
-  const calcProficienty = () => {
+  const calcProficiency = () => {
 
   }
 
