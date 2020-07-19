@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Progress } from "reactstrap"
 import suggest from "./assets/"
 import translations from './Translations';
 import translate from './translate';
-import Pirate from './assets/pirate.svg'
+import suggest from './suggest';
+import SuggestionCard from './SuggestionCard';
+import Pirate from './assets/pirate.svg';
 
 function App() {
 
   const [input, setInput] = useState("")
   const [output, setOutput] = useState("")
   const [suggestions, setSuggestions] = useState([])
-
 
   const handleInput = e => {
     const stateToChange = e.target.value
@@ -22,7 +23,6 @@ function App() {
   const getOutput = () => {
     setOutput(translate(input, translations))
   }
-
 
   const calcProficiency = () => {
     // TURN INPUT INTO AN ARRAY, SPLIT ON SPACES
@@ -56,7 +56,6 @@ function App() {
     getSuggestions()
   }, [])
 
-
   return (
     <>
       <div className='wrapper'>
@@ -81,6 +80,11 @@ function App() {
               <Progress className="input-bar" />
               <Progress className="output-bar" />
             </div>
+          </div>
+          <div className='suggestion-container'>
+            <h6 className='suggestion-header'>Random suggestions:</h6>
+            {suggestions.map(suggestion => <SuggestionCard suggestion={suggestion} />)}
+            <button className='suggestion-refresh' onClick={getSuggestions}>↻</button>
           </div>
         </div>
       </div>
