@@ -20,28 +20,35 @@ function App() {
     setOutput(translate(input, translations))
   }
 
+  const calcProficienty = () => {
+
+  }
+
   return (
     <>
       <div className='wrapper'>
         <div className='header-1 outline-text'>
-          <h1>Hello Mateys!</h1>
+          <h1>pARRRlay!</h1>
           <img className='pirate' src={Pirate} alt='pirate' width={'100px'} />
         </div>
         <div className='header-2'>
-          <h2 className='outline-text'>Welcome to the pirate translator.</h2>
+          <h2 className='outline-text'>Welcome to the pirate translator</h2>
         </div>
         <div className='translator'>
-          <div className='instructions'>
+          {/* <div className='instructions'>
             <p className='outline-text'>Enter text below and see the pirate translation!</p>
-          </div>
+          </div> */}
           <div className='translate'>
             <div className='text-fields'>
-              <textarea className='input' rows="10" cols="25" onChange={handleInput}></textarea>
+              <textarea className='input' rows="10" cols="25" placeholder="Enter text here" onChange={handleInput}></textarea>
               <button onClick={getOutput}>Translate</button>
-              <textarea className='output' value={output} readOnly></textarea>
+              <textarea className='output' rows="10" cols="25" value={output} placeholder="Translation here" readOnly></textarea>
+            </div>
+            <div>
+              <p className="percent-pirate">pARRRlay-ometer</p>
             </div>
             <div className="bar-container">
-              <Progress className="input-bar" value="50" />
+              <Progress className="input-bar" value="25" />
               <Progress className="output-bar" value="50" />
             </div>
           </div>

@@ -35,6 +35,7 @@ body {
     padding: 0;
     margin: 0;
     color: white;
+    font-weight: 700;
 }
 
 .header-2 {
@@ -50,7 +51,8 @@ body {
 .header-2 h2 {
     margin: 1%;
     padding: 0%;
-    font-size: 22pt;
+    font-size: 15pt;
+    text-transform: uppercase;
 }
 .header-2 p {
     font-size: 16pt;
@@ -81,31 +83,48 @@ body {
     color: white;
     margin: 1%;
     padding: 0;
-    font-size: 20pt;
+    font-size: 15pt;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .translate {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .text-fields {
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
 }
 
 .bar-container {
     display: flex;
-    justify-content: space-around;
-    margin: 0 5px 0 5px;
+    justify-content: center;
+    /* margin: 0 5px 0 5px; */
 }
 
 .progress {
-    width: 35%
+    width: 217.33px;
 }
 
+.input-bar {
+    margin-right: 41px;
+    
+}
+
+.percent-pirate {
+    text-align: center;
+    margin-bottom: 0px;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+.output-bar {
+    margin-left: 41px;
+}
 /* .input, .output {
     width: 35%
 
