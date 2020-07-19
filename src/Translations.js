@@ -906,9 +906,13 @@ const translations = [
     }
     },
     {
-    stopp: {
-        ed: "heaved to",
-        ing: "heaving to"
+    stopped: {
+        normal: "heaved to"
+    }
+    },
+    {
+    stopping: {
+        normal: "heaving to"
     }
     },
     {
