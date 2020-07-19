@@ -13,7 +13,8 @@ function App() {
   const [input, setInput] = useState("")
   const [output, setOutput] = useState("")
   const [suggestions, setSuggestions] = useState([])
-  const [value, setValue] = useState(0)
+  const [inputValue, setInputValue] = useState(0)
+  const [outputValue, setOutputValue] = useState(0)
 
   const handleInput = e => {
     const stateToChange = e.target.value
@@ -24,39 +25,98 @@ function App() {
     setOutput(translate(input, translations))
   }
 
-  const calcProficiency = () => {
-    // TURN INPUT INTO AN ARRAY, SPLIT ON SPACES
-    let arr = input.split(" ")
-    // SET COUNTER = 0
+  const calcInputProficiency = () => {
     let counter = 0;
-    // LOOP THROUGH ARRAY, FOR EACH WORD, CHECK IF EXISTS IN SUGGESTIONS
-    for (let word in arr) {
-      for (let i = 0; i < translations.length; i++) {
-        console.log(Object.values(translations[i])[0].normal.toString())
-        if (word == Object.values(translations[i])[0].normal.toString()) {
-          // IF EXISTS, COUNTER += 1
+
+    let x = []
+
+    for (let i = 0; i < translations.length; i++) {
+      if (Object.values(translations[i])[0].normal) {
+        if (input.includes(Object.values(translations[i])[0].normal)) {
           counter += 1
+          x.push(Object.values(translations[i])[0].normal)
+        }
+      }
+      else if (Object.values(translations[i])[0].s) {
+        if (input.includes(Object.values(translations[i])[0].s)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].s)
+        }
+      } else if (Object.values(translations[i])[0].ing) {
+        if (input.includes(Object.values(translations[i])[0].ing)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].ing)
+        }
+      }
+      else if (Object.values(translations[i])[0].ed) {
+        if (input.includes(Object.values(translations[i])[0].ed)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].ed)
         }
       }
     }
-    // END LOOP, LET VALUE = COUNTER / ARRAY.LENGTH
-    let percentage = counter / arr.length
-    // ASSIGN VALUE TO PROGRESS BAR
-    setValue(percentage)
+
+    let arr = input.split(/\s+/g)
+    let length = input.split(/\s+/g).length
+
+    if (arr.includes("")) {
+      length -= 1
+    }
+    let percentage = counter / length
+    setInputValue(percentage)
+  }
+  const calcOutputProficiency = () => {
+    let counter = 0;
+
+    let x = []
+
+    for (let i = 0; i < translations.length; i++) {
+      if (Object.values(translations[i])[0].normal) {
+        if (output.includes(Object.values(translations[i])[0].normal)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].normal)
+        }
+      }
+      else if (Object.values(translations[i])[0].s) {
+        if (output.includes(Object.values(translations[i])[0].s)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].s)
+        }
+      } else if (Object.values(translations[i])[0].ing) {
+        if (output.includes(Object.values(translations[i])[0].ing)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].ing)
+        }
+      }
+      else if (Object.values(translations[i])[0].ed) {
+        if (output.includes(Object.values(translations[i])[0].ed)) {
+          counter += 1
+          x.push(Object.values(translations[i])[0].ed)
+        }
+      }
+    }
+
+    let arr = output.split(/\s+/g)
+    let length = output.split(/\s+/g).length
+
+    if (arr.includes("")) {
+      length -= 1
+    }
+    let percentage = counter / length
+
+    setOutputValue(percentage)
   }
 
 
   useEffect(() => {
-    calcProficiency()
-    console.log(value)
-
+    calcInputProficiency()
   }
     , [input])
 
-  // const handleAndCalc = (e) => {
-  //   handleInput(e)
-  //   calcProficiency()
-  // }
+  useEffect(() => {
+    calcOutputProficiency()
+  }
+    , [output])
 
   const getSuggestions = () => {
     setSuggestions(suggest(translations))
@@ -70,7 +130,7 @@ function App() {
     <>
       <div className='wrapper'>
         <div className='header-1 outline-text'>
-          <h1>pARRRlay!</h1>
+          <h1>pARRRley!</h1>
           <img className='pirate' src={Pirate} alt='pirate' width={'100px'} />
         </div>
         <div className='header-2'>
@@ -84,11 +144,11 @@ function App() {
               <textarea className='output' rows="10" cols="25" value={output} placeholder="Translation here" readOnly></textarea>
             </div>
             <div>
-              <p className="percent-pirate">pARRRlay-ometers</p>
+              <p className="percent-pirate">pARRRley-ometers</p>
             </div>
             <div className="bar-container">
-              <Progress className="input-bar" value={value} />
-              <Progress className="output-bar" />
+              <Progress className="input-bar" value={inputValue * 100} />
+              <Progress className="output-bar" value={outputValue * 100} />
             </div>
           </div>
           <div className='suggestion-container'>

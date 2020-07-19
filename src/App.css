@@ -122,7 +122,10 @@ body {
     margin-bottom: 0px;
     color: white;
     text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+    margin: 2px 0 2px 0;
+    
 }
+
 .output-bar {
     margin-left: 41px;
 }
@@ -156,4 +159,27 @@ body {
 }
 .suggestion-refresh:hover {
     cursor: pointer;
+}
+
+.suggestion-header {
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin: unset;
+    line-height: 1.7;
+    font-size: 15px;
+    padding: 8px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.8);
+}
+.suggestion-refresh {
+    all: unset;
+    background-color: white;
+    color: #438a5e;
+    text-align: center;
+    height: 19px;
+    width: 16px;
+    margin: 9px;
+    padding: 0 1px 2px 1px;
+    box-shadow: -1px 1px 1px .4px rgba(0,0,0,0.5);
 }
