@@ -862,8 +862,8 @@ const translations = [
     }
     },
     {
-    hitt: {
-        ing: "flogging"
+    hitting: {
+        normal: "flogging"
     }
     },
     {

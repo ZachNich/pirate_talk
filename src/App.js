@@ -1,22 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import translations from './Translations';
 import translate from './translate';
-import Pirate from './assets/pirate.svg'
+import suggest from './suggest';
+import SuggestionCard from './SuggestionCard';
+import Pirate from './assets/pirate.svg';
 
 function App() {
 
   const [input, setInput] = useState("")
   const [output, setOutput] = useState("")
+  const [suggestions, setSuggestions] = useState([])
   
   const handleInput = e => {
     const stateToChange = e.target.value
     setInput(stateToChange)
   }
 
-  const getOutput= () => {
+  const getOutput = () => {
     setOutput(translate(input, translations))
   }
+
+  const getSuggestions = () => {
+    setSuggestions(suggest(translations))
+  }
+
+  useEffect(() => {
+    getSuggestions()
+  }, [])
 
   return (
     <>
@@ -38,6 +49,10 @@ function App() {
               <button onClick={getOutput}>Translate</button>
               <textarea className='output' rows='15' cols='25' value={output} readOnly></textarea>
             </div>
+          </div>
+          <div className='suggestion-container'>
+            <h6 className='suggestion-header'>Random suggestions:</h6>
+            {suggestions.map(suggestion => <SuggestionCard suggestion={suggestion} />)}
           </div>
         </div>
       </div>
