@@ -53,6 +53,7 @@ function App() {
           <div className='suggestion-container'>
             <h6 className='suggestion-header'>Random suggestions:</h6>
             {suggestions.map(suggestion => <SuggestionCard suggestion={suggestion} />)}
+            <button className='suggestion-refresh' onClick={getSuggestions}>↻</button>
           </div>
         </div>
       </div>

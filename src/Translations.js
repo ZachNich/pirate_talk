@@ -605,7 +605,7 @@ const translations = [
     },
     {
         toast: {
-        normal: "hardtack"
+            normal: "hardtack"
         }
     },
     {
@@ -660,8 +660,6 @@ const translations = [
         email: {
             normal: "letter",
             s: "letter",
-            ing: "emailing",
-            ed: "emailed"
         }
     },
     {
@@ -677,339 +675,378 @@ const translations = [
         }
     },
     {
-    contacts: {
-        normal: "specs",
-        s: "specs"
-    }
+        contacts: {
+            normal: "specs",
+            s: "specs"
+        }
     },
     {
-    drive: {
-        normal: "navigate",
-        s: "navigates"
-    }
+        drive: {
+            normal: "navigate",
+            s: "navigates"
+        }
     },
     {
-    drove: {
-        normal: "navigated"
-    }
+        drove: {
+            normal: "navigated"
+        }
     },
     {
-    car: {
-        normal: "ship",
-        s: "ships"
-    }
+        car: {
+            normal: "ship",
+            s: "ships"
+        }
     },
     {
-    road: {
-        normal: "sea",
-        s: "s"
-    }
+        road: {
+            normal: "sea",
+            s: "seas"
+        }
     },
     {
-    highway: {
-        normal: "sea",
-        s: "s"
-    }
+        highway: {
+            normal: "sea",
+            s: "seas"
+        }
     },
     {
-    interstate: {
-        normal: "sea",
-        s: "s"
-    }
+        interstate: {
+            normal: "sea",
+            s: "seas"
+        }
     },
     {
-    bypass: {
-        normal: "sea",
-        s: "s"
-    }
+        bypass: {
+            normal: "sea",
+        }
     },
     {
-    mop: {
-        normal: "swab",
-        s: "swabs",
-    }
+        bypasses: {
+            normal: "seas"
+        }
     },
     {
-    mopp: {
-        ed: "swabbed",
-        ing: "swabbing"
-    }
+        mop: {
+            normal: "swab",
+            s: "swabs"
+        }
     },
     {
-    sweep: {
-        normal: "swab",
-        s: "swabs",
-        ing: "swabbing"
-    }
+        mopped: {
+            normal: "swabbed"
+        }
     },
     {
-    swept: {
-        normal: "swabbed"
-    }
+        mopping: {
+            normal: "swabbing"
+        }
     },
     {
-    swiffer: {
-        normal: "swab",
-        s: "swabs",
-        ing: "swabbing",
-        ed: "swabbed"
-    }
+        sweep: {
+            normal: "swab",
+            s: "swabs",
+            ing: "swabbing"
+        }
     },
     {
-    yes: {
-        normal: "aye"
-    }
+        swept: {
+            normal: "swabbed"
+        }
     },
     {
-    yeah: {
-        normal: "aye"
-    }
+        swiffer: {
+            normal: "swab",
+            s: "swabs",
+            ing: "swabbing",
+            ed: "swabbed"
+        }
     },
     {
-    yah: {
-        normal: "aye"
-    }
+        yes: {
+            normal: "aye"
+        }
     },
     {
-    steal: {
-        normal: "pillage",
-        s: "pillages",
-        ing: "pillaging"
-    }
+        yeah: {
+            normal: "aye"
+        }
     },
     {
-    stole: {
-        normal: "pillaged"
-    }
+        yah: {
+            normal: "aye"
+        }
     },
     {
-    rob: {
-        normal: "pillage",
-        s: "pillages",
-    }
+        steal: {
+            normal: "pillage",
+            s: "pillages",
+            ing: "pillaging"
+        }
     },
     {
-    robb: {
-        ing: "pillaging",
-        ed: "pillaged"
-    }
+        stole: {
+            normal: "pillaged"
+        }
     },
     {
-    hell: {
-        normal: "Davy Jones' Locker"
-    }
+        rob: {
+            normal: "pillage",
+            s: "pillages",
+        }
     },
     {
-    afterlife: {
-        normal: "Davy Jones' Locker"
-    }
+        robbing: {
+            normal: "pillaging",
+        }
     },
     {
-    quickly: {
-        normal: "handsomely"
-    }
+        robbed: {
+            normal: "pillaged",
+        }
     },
     {
-    carefully: {
-        normal: "handsomely"
-    }
+        hell: {
+            normal: "Davy Jones' Locker"
+        }
     },
     {
-    suit: {
-        normal: "long clothes",
-        s: "long clothes"
-    }
+        afterlife: {
+            normal: "Davy Jones' Locker"
+        }
     },
     {
-    jacket: {
-        normal: "long clothes",
-        s: "long clothes"
-    }
+        quickly: {
+            normal: "handsomely"
+        }
     },
     {
-    okay: {
-        normal: "aye, aye"
-    }
+        carefully: {
+            normal: "handsomely"
+        }
     },
     {
-    yessir: {
-        normal: "aye, aye"
-    }
+        suit: {
+            normal: "long clothes",
+            s: "long clothes"
+        }
     },
     {
-    song: {
-        normal: "shanty",
-        s: "shanties"
-    }
+        jacket: {
+            normal: "long clothes",
+            s: "long clothes"
+        }
     },
     {
-    tune: {
-        normal: "shanty",
-        s: "shanties"
-    }
+        okay: {
+            normal: "aye, aye"
+        }
     },
     {
-    beat: {
-        normal: "flog",
-        s: "flogs",
-        ing: "flogging"
-    }
+        ok: {
+            normal: "aye, aye"
+        }
     },
     {
-    hit: {
-        normal: "flog",
-        s: "flogs",
-    }
+        yessir: {
+            normal: "aye, aye"
+        }
     },
     {
-    hitting: {
-        normal: "flogging"
-    }
+        song: {
+            normal: "chantey",
+            s: "chanteys"
+        }
     },
     {
-    strike: {
-        normal: "flog",
-        s: "flogs"
-    }
+        tune: {
+            normal: "chantey",
+            s: "chanteys"
+        }
     },
     {
-    striking: {
-        normal: "flogging"
-    }
+        beat: {
+            normal: "flog",
+            s: "flogs",
+            ing: "flogging"
+        }
     },
     {
-    struck: {
-        normal: "flogged"
-    }
+        hit: {
+            normal: "flog",
+            s: "flogs",
+        }
     },
     {
-    team: {
-        normal: "crew",
-        s: "crews"
-    }
+        hitting: {
+            normal: "flogging"
+        }
     },
     {
-    teammate: {
-        normal: "crew",
-        s: "crews"
-    }
+        strike: {
+            normal: "flog",
+            s: "flogs"
+        }
     },
     {
-    ally: {
-        normal: "crew"
-    }
+        striking: {
+            normal: "flogging"
+        }
     },
     {
-    stop: {
-        normal: "heave to",
-        s: "heaves to"
-    }
+        struck: {
+            normal: "flogged"
+        }
     },
     {
-    stopped: {
-        normal: "heaved to"
-    }
+        team: {
+            normal: "crew",
+            s: "crews"
+        }
     },
     {
-    stopping: {
-        normal: "heaving to"
-    }
+        teammate: {
+            normal: "crew member",
+            s: "crew"
+        }
     },
     {
-    strand: {
-        normal: "maroon",
-        s: "maroons",
-        ed: "marooned",
-        ing: "marooning"
-    }
+        ally: {
+            normal: "crew member"
+        }
     },
     {
-    abandon: {
-        normal: "maroon",
-        s: "maroons",
-        ed: "marooned",
-        ing: "marooning"
-    }
+        allies: {
+            normal: "crew"
+        }
     },
     {
-    desert: {
-        normal: "maroon",
-        s: "maroons",
-        ed: "marooned",
-        ing: "marooning"
-    }
+        stop: {
+            normal: "heave to",
+            s: "heaves to"
+        }
     },
     {
-    conference: {
-        normal: "parley",
-        s: "parleys"
-    }
+        stopped: {
+            normal: "heaved to"
+        }
     },
     {
-    conferenc: {
-        ed: "parleyed",
-        ing: "parleying"
-    }
+        stopping: {
+            normal: "heaving to"
+        }
     },
     {
-    discuss: {
-        normal: "parley",
-        ed: "parleyed",
-        ing: "parleying"
-    }
+        strand: {
+            normal: "maroon",
+            s: "maroons",
+            ed: "marooned",
+            ing: "marooning"
+        }
     },
     {
-    meditate: {
-        normal: "parley",
-        s: "parleys"
-    }
+        abandon: {
+            normal: "maroon",
+            s: "maroons",
+            ed: "marooned",
+            ing: "marooning"
+        }
     },
     {
-    meditat: {
-        ed: "parleyed",
-        ing: "parleying"
-    }
+        desert: {
+            normal: "maroon",
+            s: "maroons",
+            ed: "marooned",
+            ing: "marooning"
+        }
     },
     {
-    nap: {
-        normal: "caulk",
-        s: "caulks"
-    }
+        conference: {
+            normal: "parley",
+            s: "parleys"
+        }
     },
     {
-    napp: {
-        ing: "caulking",
-        ed: "caulked"
-    }
+        conferenced: {
+            normal: "parleyed"
+        }
     },
     {
-    boss: {
-        normal: "captain"
-    }
+        conferencing: {
+            normal: "parleying"
+        }
     },
     {
-    manager: {
-        normal: "captain",
-        s: "captains"
-    }
+        discuss: {
+            normal: "parley",
+            ed: "parleyed",
+            ing: "parleying"
+        }
     },
     {
-    parent: {
-        normal: "captain",
-        s: "captains"
-    }
+        mediate: {
+            normal: "parley",
+            s: "parleys"
+        }
     },
     {
-    president: {
-        normal: "king",
-        s: "kings"
-    }
+        mediated: {
+            normal: "parleyed",
+        }
     },
     {
-    shoe: {
-        normal: "boot",
-        s: "boots"
-    }
+        mediating: {
+            normal: "parleying"
+        }
+    },
+    {
+        nap: {
+            normal: "caulk",
+            s: "caulks"
+        }
+    },
+    {
+        napping: {
+            normal: "caulking"
+        }
+    },
+    {
+        napped: {
+            normal: "caulked"
+        }
+    },
+    {
+        boss: {
+            normal: "captain"
+        }
+    },
+    {
+        bosses: {
+            normal: "captains"
+        }
+    },
+    {
+        manager: {
+            normal: "captain",
+            s: "captains"
+        }
+    },
+    {
+        parent: {
+            normal: "captain",
+            s: "captains"
+        }
+    },
+    {
+        president: {
+            normal: "king",
+            s: "kings"
+        }
+    },
+    {
+        shoe: {
+            normal: "boot",
+            s: "boots"
+        }
     }
 ]
 
