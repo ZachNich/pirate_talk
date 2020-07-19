@@ -102,7 +102,6 @@ body {
     flex-flow: row wrap;
 }
 
-<<<<<<< HEAD
 .bar-container {
     display: flex;
     justify-content: center;
@@ -131,7 +130,6 @@ body {
     width: 35%
 
 } */
-=======
 .suggestion-container {
     display: flex;
     justify-content: center;
@@ -159,4 +157,3 @@ body {
 .suggestion-refresh:hover {
     cursor: pointer;
 }
->>>>>>> master
