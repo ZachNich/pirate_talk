@@ -1,16 +1,17 @@
 const suggest = translations => {
     const keys = []
-    const suggestions = []
+    const suggestions = new Set()
+
     for (let i = 0; i < translations.length; i++) {
         keys.push(Object.keys(translations[i]).toString())
-        console.log(Object.keys(translations[i]).toString())
     }
 
-    for (let i = 0; i < 4; i++) {
-        suggestions.push(keys[Math.floor(Math.random() * translations.length)])
+    while (suggestions.size < 4) {
+        suggestions.add(keys[Math.floor(Math.random() * translations.length)])
     }
 
-    return suggestions;
+    const suggestionArr = [...suggestions]
+    return suggestionArr
 }
 
 export default suggest
