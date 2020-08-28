@@ -2,7 +2,7 @@
 > Ever heard of national Talk Like a Pirate Day? That's every day with Parrrley!
 
 ## When? Why?
-Parrrley was created in about 24 hours between Friday, July 17th and Saturday, July 20th. A team of four--Tanner, John, Zane, and Zach--entered MLH's HackItShipIt Hackathon with the goal of creating a React app and having fun while doing it. With a nautically themed hackathon, it was easy enough to come up with an idea.
+Parrrley was created in about 24 hours between Friday, July 17th and Saturday, July 18th. A team of four--Tanner, John, Zane, and Zach--entered MLH's HackItShipIt Hackathon with the goal of creating a React app and having fun while doing it. With a nautically themed hackathon, it was easy enough to come up with an idea.
 
 ## How?
 
